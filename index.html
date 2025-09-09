@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECRIS Consultoría y Capacitación SpA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+      background-color: #f9f9f9;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
+    header img {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background-color: #00796B;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #004D40;
+    }
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00796B;
+    }
+    section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    footer {
+      background: #00796B;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    /* WhatsApp flotante */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="content">
+      <img src="ECRIS_logo.png" alt="Logo ECRIS">
+      <h1>¡Potencia tu futuro con ECRIS!</h1>
+      <p>Consultoría en HSEQ, Capacitación y Soporte Digital</p>
+      <a href="#contacto" class="btn">Solicita tu reunión</a>
+    </div>
+  </header>
+
+  <section id="quienes">
+    <h2>Quiénes Somos</h2>
+    <p>
+      En <strong>ECRIS Consultoría y Capacitación SpA</strong> apoyamos a empresas en la gestión integral de HSEQ,
+      optimizando procesos y desarrollando talento humano mediante soluciones técnicas, capacitaciones y soporte digital personalizado.
+    </p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <p>
+      🔹 Gestión HSEQ y soporte documental en portales (WiseFollow, Prodity, Softland, Syght).<br>
+      🔹 Carga y control de fichas de trabajadores, consolidación de datos y reportes.<br>
+      🔹 Capacitación y mantención de plataformas digitales con manuales personalizados.<br>
+    </p>
+  </section>
+
+  <section id="beneficios">
+    <h2>Beneficios</h2>
+    <p>
+      ✔ Cumplimiento normativo<br>
+      ✔ Optimización de tiempos<br>
+      ✔ Reducción de riesgos y errores<br>
+      ✔ Autonomía digital para tu empresa<br>
+    </p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>
+      ✉ info.ecris.cap@gmail.com<br>
+      🌐 www.asesoriaecris.cl<br>
+      📍 Chile
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 ECRIS Consultoría y Capacitación SpA - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/56946656213" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+</body>
+</html>
