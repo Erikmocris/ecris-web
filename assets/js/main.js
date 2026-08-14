@@ -1,6 +1,6 @@
 const b=document.querySelector('.menu-btn'),m=document.querySelector('.menu');b?.addEventListener('click',()=>m.classList.toggle('open'));document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
 
-// Marca ECRIS: usar siempre el logo blanco original aprobado, sin filtros ni reconstrucciones.
+// Marca ECRIS: usar siempre el logo blanco original aprobado, sin filtros, placas ni deformaciones.
 const logoSrc='/ecris-web/assets/ecris-logo-original-white.webp';
 document.querySelectorAll('img.logo-img,.site-footer-modern img,.foot img').forEach(img=>{
   img.src=logoSrc;
@@ -9,12 +9,39 @@ document.querySelectorAll('img.logo-img,.site-footer-modern img,.foot img').forE
   img.style.maxHeight='58px';
   img.style.objectFit='contain';
   img.style.objectPosition='left center';
+  img.style.display='block';
   img.style.filter='none';
   img.style.background='transparent';
   img.style.padding='0';
+  img.style.margin='0';
+  img.style.border='0';
   img.style.borderRadius='0';
+
+  // Algunas páginas antiguas envolvían el logo en un span blanco. Lo anulamos globalmente.
+  let node=img.parentElement;
+  while(node && !node.classList?.contains('logo-link') && node!==document.body){
+    node.style.background='transparent';
+    node.style.backgroundColor='transparent';
+    node.style.padding='0';
+    node.style.margin='0';
+    node.style.border='0';
+    node.style.borderRadius='0';
+    node.style.boxShadow='none';
+    node.style.width='auto';
+    node.style.height='auto';
+    node=node.parentElement;
+  }
+
   const a=img.closest('a');
-  if(a){a.style.background='transparent';a.style.padding='0';a.style.boxShadow='none';a.style.borderRadius='0';}
+  if(a){
+    a.style.background='transparent';
+    a.style.backgroundColor='transparent';
+    a.style.padding='0';
+    a.style.margin='0';
+    a.style.border='0';
+    a.style.boxShadow='none';
+    a.style.borderRadius='0';
+  }
 });
 
 const svg=(path)=>`<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`;
