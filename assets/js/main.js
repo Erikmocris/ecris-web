@@ -17,7 +17,6 @@ document.querySelectorAll('img.logo-img,.site-footer-modern img,.foot img').forE
   img.style.border='0';
   img.style.borderRadius='0';
 
-  // Algunas páginas antiguas envolvían el logo en un span blanco. Lo anulamos globalmente.
   let node=img.parentElement;
   while(node && !node.classList?.contains('logo-link') && node!==document.body){
     node.style.background='transparent';
@@ -43,6 +42,16 @@ document.querySelectorAll('img.logo-img,.site-footer-modern img,.foot img').forE
     a.style.borderRadius='0';
   }
 });
+
+// Hero principal: usar imagen real de terreno y ocultar la ilustración CSS anterior.
+const heroPhoto=document.querySelector('.hero-photo-art');
+if(heroPhoto){
+  heroPhoto.style.backgroundImage="linear-gradient(90deg,rgba(4,26,47,.12),rgba(4,26,47,.02)),url('/ecris-web/assets/ecris-hero-field.webp')";
+  heroPhoto.style.backgroundSize='cover';
+  heroPhoto.style.backgroundPosition='center center';
+  heroPhoto.style.backgroundRepeat='no-repeat';
+  heroPhoto.querySelectorAll('.mountains,.tower,.worker').forEach(el=>el.style.display='none');
+}
 
 const svg=(path)=>`<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`;
 const icons={
